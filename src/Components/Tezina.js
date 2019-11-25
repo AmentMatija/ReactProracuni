@@ -1,30 +1,30 @@
 import {Switch, Route} from 'react-router-dom'
 
 import React,  {Component} from 'react';
-import TezKru from "./Forme/TezKru";
-import TezKva from "./Forme/TezKva";
-import TezCjev from "./Forme/TezCjev";
-import OkrugliProfil from "./Forme/OkrugliProfil";
-import TezPravokutneCjevi from "./Forme/TezPravokutneCjevi";
-import PravokutniProfil from "./Forme/PravokutniProfil";
-import TablicaMaterijala from "./Forme/TablicaMaterijala";
+import TezKru from "./Components/Forme/TezKru";
+import TezKva from "./Components/Forme/TezKva";
+import TezCjev from "./Components/Forme/TezCjev";
+import OkrugliProfil from "./Components/Forme/OkrugliProfil";
+import TezPravokutneCjevi from "./Components/Forme/TezPravokutneCjevi";
+import PravokutniProfil from "./Components/Forme/PravokutniProfil";
+import TablicaMaterijala from "./Components/Forme/TablicaMaterijala";
 
 class Tezina extends Component {
   render() {
-	    return (	    
-	        <React.Fragment>  	         
+      return (      
+          <React.Fragment>             
               <Switch>                          
-                <Route exact path="/TezKru" component={TezKru} />
-                <Route exact path="/TezKva" component={TezKva} />
-              	<Route exact path="/TezCjev" component={TezCjev} />
-              	<Route exact path="/TezPravokutneCjevi" component={TezPravokutneCjevi} />
-              	<Route exact path="/OkrugliProfil" component={OkrugliProfil} />
-              	<Route exact path="/PravokutniProfil" component={PravokutniProfil} />
-                <Route exact path="/TablicaMaterijala" component={TablicaMaterijala} />
+                <Route exact path="/Components/Forme/TezKru" component={TezKru} />
+                <Route exact path="/Components/Forme/TezKva" component={TezKva} />
+                <Route exact path="/Components/Forme/Forme/TezCjev" component={TezCjev} />
+                <Route exact path="/Components/Forme/TezPravokutneCjevi" component={TezPravokutneCjevi} />
+                <Route exact path="/Components/Forme/OkrugliProfil" component={OkrugliProfil} />
+                <Route exact path="/Components/Forme/PravokutniProfil" component={PravokutniProfil} />
+                <Route exact path="/Components/Forme/TablicaMaterijala" component={TablicaMaterijala} />
               </Switch> 
-            </React.Fragment> 	      
-	   	  
-	   	);
-	 }
+            </React.Fragment>         
+        
+      );
+   }
 }
 export default Tezina;
