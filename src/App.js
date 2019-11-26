@@ -9,6 +9,7 @@ import Pocetna from "./Components/Pocetna";
 import Volumen from "./Components/Volumen";
 import Tezina from "./Components/Tezina";
 import Izometrija from "./Components/Izometrija";
+import Footer from "./Components/Footer";
 
 import TezKru from "./Components/Forme/TezKru";
 import TezKva from "./Components/Forme/TezKva";
@@ -38,6 +39,7 @@ class App extends Component {
           <Route exact path="/Components/Forme/PravokutniProfil" component={PravokutniProfil} />
           <Route exact path="/Components/Forme/TablicaMaterijala" component={TablicaMaterijala} />
         </Switch> 
+        <Footer/>
       </React.Fragment>     
     );
   }
