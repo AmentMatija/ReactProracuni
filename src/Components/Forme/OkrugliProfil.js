@@ -85,6 +85,7 @@ export default class OkrugliProfil extends React.Component {
 			      </form>
 			    </Row>
 			  </Container>
+			  <br/><br/><br/>	
   			</div>  			
 		);
 	}	

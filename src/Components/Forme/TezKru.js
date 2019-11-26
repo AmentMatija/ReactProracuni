@@ -82,6 +82,7 @@ export default class TezKru extends React.Component {
 			      </form>
 			    </Row>
 			  </Container>
+			  <br/><br/><br/>	
   			</div> 
 		
 		);

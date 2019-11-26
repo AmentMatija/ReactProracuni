@@ -111,6 +111,7 @@ export default class TezPravokutneCjevi extends React.Component {
 			      </form>
 			    </Row>
 			  </Container>
+			  <br/><br/><br/>	
   			</div> 
   			
 		);

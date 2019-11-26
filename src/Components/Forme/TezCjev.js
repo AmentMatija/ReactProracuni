@@ -98,6 +98,7 @@ export default class TezCjev extends React.Component {
 			      </form>
 			    </Row>
 			  </Container>
+			  <br/><br/><br/>	
   			</div> 
   			
 		);
