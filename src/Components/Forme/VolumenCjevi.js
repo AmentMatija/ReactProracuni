@@ -1,4 +1,5 @@
 import React from 'react';
+import {Container, Row, Col} from 'react-bootstrap';
 
 export default class VolumenCjevi extends React.Component {
 	state={
@@ -14,38 +15,59 @@ export default class VolumenCjevi extends React.Component {
 		promjer=promjer/100;
 		let vol=(promjer/2)*(promjer/2)*3.14159*duzina;	//izracun volumena
 		vol=(vol).toFixed(2);							//zaokruzivanje na dvije decimale
-		this.setState({volumen: vol});					//prijenos vol vrijednosti u stanje
+		this.setState({volumen: vol + " Litara"});		//prijenos vol vrijednosti u stanje
 		
 		
 	};
 	render(){
 		return(
-			<form>
-		        <h1>Zapremnina cjevi/valjkaste posude</h1>
+			<div>
+			<h1 className="text-center">Zapremnina cjevovoda</h1>
+			  <Container>
+			  	<Row>		
+					<form>
+					  <Col xs={12} md={8}>
+					    <Row>
+						    <Col xs={5}><p>Dužina cjevovoda:</p></Col>
+						    <Col xs={4}>
+						      <input			              
+							  value={this.state.lCjevi} 
+							  type="number" 
+							     onChange={e => this.setState({lCjevi: e.target.value})} />		        
+							 </Col>
+							 <Col xs={3}><p>metara</p></Col>	          
+					    </Row>
 
-		        <p className="d-inline">Dužina cjevi/posude:</p>
-		        <input 
-		        value={this.state.lCjevi} 
-		        type="number" 
-		        onChange={e => this.setState({lCjevi: e.target.value})} />
-		        <p  className="d-inline">(m)</p>
-		        <br/>
+						 <Row>
+						    <Col xs={5}><p>Unutarnji promjer:</p></Col>
+						    <Col xs={4}>
+						      <input			              
+							   value={this.state.unutarnjiD}
+							   type="number" 
+							   onChange={e => this.setState({unutarnjiD: e.target.value})} />		        
+							 </Col>
+							 <Col xs={3}><p>mm</p></Col>	          
+					    </Row>
 
-		        <p className="d-inline">Unutarnji promjer:</p>
-		        <input 
-		        value={this.state.unutarnjiD}
-		        type="number"
-		        onChange={e => this.setState({unutarnjiD: e.target.value})} />
-		        <p className="d-inline">(mm)</p><br/>
-		        
-		        <button onClick={e => this.onSubmit(e)}>Izračunaj </button>
+					    <Row>
+					     <Col>
+					       <button
+					        type="button" 
+					        className="btn btn-dark" 
+					        onClick={e => this.onSubmit(e)}>Izračunaj 
+					       </button>
+					     </Col>
 
-		        <p>Volumen(u litrama) je: {this.state.volumen} </p>
-		        <br />
+					     <Col>
+					      <h2>{this.state.volumen}</h2>
+					     </Col>
+					    </Row> 	
 
-		        <p class="blockquote-footer">Upozorenje! Ovaj proračun računa zapremninu ravne linije cjevovoda ili valjkaste posude bez koljena, uboda, suženja i proširenja </p>
-  			</form>
+					  </Col> 
+					</form>
+			    </Row>
+			  </Container>
+  			</div> 			  
 		);
-	}
-	
+	}	
 }
