@@ -24,7 +24,7 @@ class App extends Component {
       <React.Fragment>    
         <Navbarb/>
         <Switch>
-        <div>
+        <div className="srednjiDio">
           <Route exact path="/" component={Pocetna} />
           <Route exact path="/Components/Volumen" component={Volumen} />
           <Route exact path="/Components/Tezina" component={Tezina} />
@@ -41,9 +41,7 @@ class App extends Component {
           <Route exact path="/Components/Forme/TablicaMaterijala" component={TablicaMaterijala} />
         </div>
         </Switch> 
-        <div>
-          <Footer/>
-        </div>
+        <Footer/>        
       </React.Fragment>     
     );
   }
