@@ -1,24 +1,21 @@
 import React from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import PMaterijal from './PMaterijal';
 
-const ListaMaterijala = (props) => {
+const ListaMaterijala = ({materijali}) => {
 	return (
-	  <div>
-	  	<Container>
-	  	  <Row>
-	  	    <Col>
-	  	      <p>{props.name}</p>
-	  	    </Col>
-	  	    <Col>
-	  	      <p>{props.gustoca}</p>
-	  	    </Col>
-	  	    <Col>
-	  	      <p>g/cm&#179;</p>
-	  	    </Col>
-	  	  </Row>
-	  	</Container>
-
-	  </div>
+	 <div>
+	 {
+	   materijali.map((mat, i) => {
+	   	return (
+	   	  <PMaterijal
+	   	   key={i}
+	   	   id={materijali[i].id}
+	   	   name={materijali[i].name}
+	   	   gustoca={materijali[i].gustoca}/>
+	   	);
+	   })
+	}
+	 </div>
 
 	);
 }

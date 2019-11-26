@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Search = () => {
+const Search = ({searchfield, searchChange}) => {
 	return(
+	<div className="text-center">
 	  <input 
 	    type = 'search'
-	    placeholder= 'pretraži'/>
+	    placeholder= 'pretraži'
+	    onChange={searchChange}/>
+	</div>
 	);
 
 }
