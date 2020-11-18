@@ -10,7 +10,7 @@ export default class Navbarb extends Component {
 		    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 			  <Navbar.Brand href="/">
 			    <MDBIcon icon="home" />
-			    {' '}Izometrijski proračuni
+			    {' '}Početna
 			  </Navbar.Brand>
 
 			  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -65,8 +65,7 @@ export default class Navbarb extends Component {
 			          <MDBIcon icon="clipboard-list" />
 			          {' '}Tablica gustoće materijala
 			        </NavDropdown.Item>
-			      </NavDropdown>
-			      <Link to="/Components/Izometrija" className="nav-link">Izometrija</Link>
+			      </NavDropdown>			      
 			    </Nav>   
 
 			  </Navbar.Collapse>
